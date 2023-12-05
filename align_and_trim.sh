@@ -14,4 +14,4 @@ for file in $(ls $DIR)
     trimal -automated1 -in $ALDIR'_muscle/'$file'.efa' -out $ALDIR'_trimmed/'$file'.phy' -phylip
     done
 
-iqtree2 -S $ALDIR'_trimmed' -nt AUTO -bb 1000 -alrt 1000
+iqtree2 -S $ALDIR'_trimmed' -nt AUTO -b 1000 -alrt 1000
