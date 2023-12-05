@@ -15,3 +15,4 @@ for file in $(ls $DIR)
     done
 
 iqtree2 -S $ALDIR'_trimmed' -nt AUTO -bb 1000 -alrt 1000
+iqtree2 -con -t $ALDIR'_trimmed.treefile'
