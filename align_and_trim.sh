@@ -1,5 +1,5 @@
 #!/usr/bin/bash -l
-#SBATCH --ntasks 32 --mem 65G --out tree_%A.log
+#SBATCH -c 32 --mem 65G --out tree_%A.log
 module load muscle
 module load IQ-TREE/2.1.1
 module load trimal
