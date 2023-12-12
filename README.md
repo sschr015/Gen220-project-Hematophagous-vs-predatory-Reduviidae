@@ -16,6 +16,13 @@ The script funannotate_annotate.sh can then be used to complete annotation. Defa
 </details>
 
 ## Orthofinder
-<details></details>
-Orthofinder was used to identify orthogroups among our species. The default settings are used within orthofinder.sh with 
+<details>
+Orthofinder was used to identify orthogroups among our species. The default settings are used within orthofinder.sh with protein fasta files created by funannotate as input.  
 </details>
+
+## Identification of lost and gained orthogroups
+<details>
+  We used the script orthofinder_out.py to create tables listing the single copy and multiple copy orthogroups gained by the hematophagous reduviids, the single and multiple copy orthogroups lost by the reduviids, and the single copy orthogroups present in all six species. This script uses the Orthogroups.GeneCount.tsv file created by orthofinder. 
+</details>
+
+##
