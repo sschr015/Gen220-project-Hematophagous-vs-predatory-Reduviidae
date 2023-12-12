@@ -52,16 +52,3 @@ for sfile in os.listdir(args.ortho_out):
     merged = pd.merge(sorted, annotcols, "left", left_on="Orthogroup", right_index=True)
     merged.to_csv(f"{args.out}/{sfile}", sep="\t")
     annotcols = pd.DataFrame()
-
-
-    
-    
-        
-                
-            
-        
-    
-            
-
-    
-    
