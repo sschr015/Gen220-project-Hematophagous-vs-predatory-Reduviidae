@@ -6,27 +6,33 @@ Hi! Welcome to the git hub repository for our gen220 project. Within this reposi
 # Explanation of scripts 
 ## De novo assembly
 <details>
+  
 We only needed to assemble RNA seq data for one species. We used the script **trinity.sh** in which we used the default settings of Trinity and included paths to fastq files of our data. 
 </details>
 
 ## Gene annotation
 <details>
-We used the tool funannote to annote our whole genome sequences. Inputs for the script **funannotate.sh** should be annotated genomes in fasta file format. Note that the insect genome is large for this tool, so we made modifications accordingly. The cleaning step has been bypassed, minimum sequence length has been set at 5kb, RNA seq data of a closely related species was added as evidence for the predict tool, the minimum training models for Augustus was set to 100 genes, the Drosophila training model was used for Augustus, and both snap and gene mark software were turned off.
+  
+We used the tool funannote to annote our whole genome sequences. Inputs for the script **funannotate.sh** should be annotated genomes in fasta file format. Note that the insect genome is large for this tool, so we made modifications accordingly. The cleaning step has been bypassed, minimum sequence length has been set at 5kb, RNA seq data of a closely related species was added as evidence for the predict tool, the minimum training models for Augustus was set to 100 genes, the Drosophila training model was used for Augustus, and both snap and gene mark software were turned off. Because the cleaning step was bypassed, the script **delete_scaffolds.py** can be used to delete scaffolds with less than 4 types of nucleotides.
 The script **funannotate_annotate.sh** can then be used to complete annotation. Default settings are used in this script with insecta_odb10 busco database
 </details>
 
 ## Orthofinder
 <details>
+  
 Orthofinder can be used to identify orthogroups among species. The default settings are used within **orthofinder.sh** with protein fasta files created by funannotate as input.  
 </details>
 
 ## Identification of lost and gained orthogroups
 <details>
+  
 We used the script **orthofinder_out.py** to create tables listing the single copy and multiple copy orthogroups gained by the hematophagous reduviids, the single and multiple copy orthogroups lost by the reduviids, and the single copy orthogroups present in all six species. This script uses the Orthogroups.GeneCount.tsv file created by orthofinder as input. 
 </details>
 
 ## Merging annotation and function
+
 <details>
+
 To merge gene annotations and functions identified with funannotate with the identified gained and lost genes, we used the script **combined_annotations.py**. The inputs for this script are the path to folder containing gained and lost orthogroup tables, orthogroups.tsv file created by orthofinder containing all orthogroups and the genes withing them, and the path to the folder containing gene annotations for each species. 
 </details>
 
@@ -43,6 +49,7 @@ Sequences can now be prepared for a tree using **align_and_trim.sh**. Default se
 
 ## Visualizing the phylogeny
 <details>
+  
 We used ggtree in R to visualize our phylogeny. The script **ggtree.R** was used and hematophagous species were marke by red tip labels. A color gradient with legend was also created for detailing branches with bootstrap support. 
 </details>
 
