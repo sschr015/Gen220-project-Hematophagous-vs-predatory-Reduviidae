@@ -8,6 +8,7 @@ Hi! Welcome to the git hub repository for our gen220 project. Within this reposi
 <details>
   We only needed to assemble RNA seq data for one species. We used the script trinity.sh in which we used the default settings of Trinity and included paths to fastq files of our data. 
 </details>
+
 ## Gene annotation
 <details>
 We used the tool funannote to annote our whole genome sequences. Inputs for the script "funannotate.sh" should be annotated genomes in fasta file format. Note that the insect genome is large for this tool, so we made modifications accordingly. The cleaning step has been bypassed, minimum sequence length has been set at 5kb, RNA seq data of a closely related species was added as evidence for the predict tool, the minimum training models for Augustus was set to 100 genes, the Drosophila training model was used for Augustus, and both snap and gene mark software were turned off.
