@@ -36,6 +36,11 @@ We used the script **orthofinder_out.py** to create tables listing the single co
 To merge gene annotations and functions identified with funannotate with the identified gained and lost genes, we used the script **combined_annotations.py**. The inputs for this script are the path to folder containing gained and lost orthogroup tables, orthogroups.tsv file created by orthofinder containing all orthogroups and the genes withing them, and the path to the folder containing gene annotations for each species. 
 </details>
 
+## Visualizing the gained/lost genes functional comparison of hematophagous and predatory genomes
+<details>
+We used matplotlib in Python to show the difference between gained/lost gene functions between hematophagous and predatory species. The script **Final_plot.ipynb** was used, functional types' details can be found in annotated files. 
+</details>
+
 ## Tree building
 <details>
   
@@ -50,7 +55,5 @@ Sequences can now be prepared for a tree using **align_and_trim.sh**. Default se
 ## Visualizing the phylogeny
 <details>
   
-We used ggtree in R to visualize our phylogeny. The script **ggtree.R** was used and hematophagous species were marke by red tip labels. A color gradient with legend was also created for detailing branches with bootstrap support. 
+We used ggtree in R to visualize our phylogeny. The script **ggtree.R** was used and hematophagous species were marked by red tip labels. A color gradient with legend was also created for detailing branches with bootstrap support. 
 </details>
-
-
