@@ -37,8 +37,10 @@ To merge gene annotations and functions identified with funannotate with the ide
 </details>
 
 ## Visualizing the gained/lost genes functional comparison of hematophagous and predatory genomes
-<details>
+<details> 
+  
 We used matplotlib in Python to show the difference between gained/lost gene functions between hematophagous and predatory species. The script **Final_plot.ipynb** was used, functional types' details can be found in annotated files. 
+
 </details>
 
 ## Tree building
